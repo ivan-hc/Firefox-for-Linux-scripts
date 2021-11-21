@@ -11,24 +11,28 @@ Each of these scripts is inspired by [the official Debian/Firefox wiki page](htt
 
 ### Uninstall
 sudo /opt/firefox/remove
+
 ------------------------------------
 # Firefox ESR
 ### Install
 
 ### Uninstall
 sudo /opt/firefox-esr/remove
+
 ------------------------------------
 # Firefox Beta
 ### Install
 
 ### Uninstall
 sudo /opt/firefox-beta/remove
+
 ------------------------------------
 # Firefox DevEdition
 ### Install
 
 ### Uninstall
 sudo /opt/firefox-dev/remove
+
 ------------------------------------
 # Firefox Nightly
 ### Install
