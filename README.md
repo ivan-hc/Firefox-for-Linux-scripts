@@ -8,34 +8,34 @@ Each of these scripts is inspired by [the official Debian/Firefox wiki page](htt
 
 # Firefox Stable
 ### Install
-
+wget https://raw.githubusercontent.com/ivan-hc/Firefox-for-Linux-scripts/main/firefox && chmod a+x ./firefox && ./firefox
 ### Uninstall
 sudo /opt/firefox/remove
 
 ------------------------------------
 # Firefox ESR
 ### Install
-
+wget https://raw.githubusercontent.com/ivan-hc/Firefox-for-Linux-scripts/main/firefox-esr && chmod a+x ./firefox-esr && ./firefox-esr
 ### Uninstall
 sudo /opt/firefox-esr/remove
 
 ------------------------------------
 # Firefox Beta
 ### Install
-
+wget https://raw.githubusercontent.com/ivan-hc/Firefox-for-Linux-scripts/main/firefox-beta && chmod a+x ./firefox-beta && ./firefox-beta
 ### Uninstall
 sudo /opt/firefox-beta/remove
 
 ------------------------------------
 # Firefox DevEdition
 ### Install
-
+wget https://raw.githubusercontent.com/ivan-hc/Firefox-for-Linux-scripts/main/firefox-dev && chmod a+x ./firefox-dev && ./firefox-dev
 ### Uninstall
 sudo /opt/firefox-dev/remove
 
 ------------------------------------
 # Firefox Nightly
 ### Install
-
+wget https://raw.githubusercontent.com/ivan-hc/Firefox-for-Linux-scripts/main/firefox-nightly && chmod a+x ./firefox-nightly && ./firefox-nightly
 ### Uninstall
 sudo /opt/firefox-nightly/remove
