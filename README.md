@@ -2,9 +2,9 @@
 Easily install and remove official Firefox Stable, Beta, DevEdition, Nightly and ESR versions on GNU / Linux using my scripts.
 
 Each of these scripts is inspired by [the official Debian/Firefox wiki page](https://wiki.debian.org/Firefox#From_Mozilla_binaries), and will add:
-- a folder in / opt containing the official version of Firefox you want, plus a script I made to remove all the files that will be installed;
-- a launcher in / usr / share / applications;
-- a symbolic link in / usr / local / bin.
+- a folder in /opt containing the official version of Firefox you want, plus a script I made to remove all the files that will be installed;
+- a launcher in /usr/share/applications;
+- a symbolic link in /usr/local/bin.
 
 # Firefox Stable
 ### Install
@@ -39,3 +39,6 @@ Each of these scripts is inspired by [the official Debian/Firefox wiki page](htt
 `wget https://raw.githubusercontent.com/ivan-hc/Firefox-for-Linux-scripts/main/firefox-nightly && chmod a+x ./firefox-nightly && sudo ./firefox-nightly`
 ### Uninstall
 `sudo /opt/firefox-nightly/remove`
+
+------------------------------------
+# These and more scripts will be available on my new repository, at [ivan-hc/APPLICATION-MANAGER](https://github.com/ivan-hc/APPLICATION-MANAGER).
