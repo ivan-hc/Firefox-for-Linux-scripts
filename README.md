@@ -41,4 +41,4 @@ Each of these scripts is inspired by [the official Debian/Firefox wiki page](htt
 `sudo /opt/firefox-nightly/remove`
 
 ------------------------------------
-# These and more scripts will be available on my new repository, at [ivan-hc/APPLICATION-MANAGER](https://github.com/ivan-hc/APPLICATION-MANAGER).
+# These and more scripts will be available on my new repository, at [ivan-hc/AM-application-manager](https://github.com/ivan-hc/AM-application-manager).
