@@ -3,15 +3,11 @@ Each of these scripts is inspired by [the official Debian/Firefox wiki page](htt
 
 Use the following links to navigate on this page:
 
-[Firefox Stable](#firefox-stable)
-
-[Firefox ESR](#firefox-esr)
-
-[Firefox Beta](#firefox-beta)
-
-[Firefox DevEdition](#firefox-devedition)
-
-[Firefox Nightly](#firefox-nightly)
+- [Firefox Stable](#firefox-stable)
+- [Firefox ESR](#firefox-esr)
+- [Firefox Beta](#firefox-beta)
+- [Firefox DevEdition](#firefox-devedition)
+- [Firefox Nightly](#firefox-nightly)
 
 Learn more about ["AM", the Application Manager for GNU/Linux](https://github.com/ivan-hc/AM-application-manager) that only installs/removes/updates/manages/allows standalone programs.
 
