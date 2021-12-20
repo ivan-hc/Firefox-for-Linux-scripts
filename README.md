@@ -1,11 +1,21 @@
-# Firefox-for-Linux-scripts
-Easily install and remove official Firefox Stable, Beta, DevEdition, Nightly and ESR versions on GNU / Linux using my scripts.
+Easily install and remove official Firefox releases (Stable, Beta, DevEdition, Nightly and ESR) on any GNU/Linux distribution (32 and 64 bit) using my scripts.
+Each of these scripts is inspired by [the official Debian/Firefox wiki page](https://wiki.debian.org/Firefox#From_Mozilla_binaries), and will add a folder in /opt (containing the official version of Firefox you want, plus a script I made to remove all the files that will be installed), a launcher in /usr/share/applications and a symbolic link in /usr/local/bin.
 
-Each of these scripts is inspired by [the official Debian/Firefox wiki page](https://wiki.debian.org/Firefox#From_Mozilla_binaries), and will add:
-- a folder in /opt containing the official version of Firefox you want, plus a script I made to remove all the files that will be installed;
-- a launcher in /usr/share/applications;
-- a symbolic link in /usr/local/bin.
+Use the following links to navigate on this page:
 
+[Firefox Stable](#firefox-stable)
+
+[Firefox ESR](#firefox-esr)
+
+[Firefox Beta](#firefox-beta)
+
+[Firefox DevEdition](#firefox-devedition)
+
+[Firefox Nightly](#firefox-nightly)
+
+Learn more about ["AM", the Application Manager for GNU/Linux](https://github.com/ivan-hc/AM-application-manager) that only installs/removes/updates/manages/allows standalone programs.
+
+------------------------------------
 # Firefox Stable
 ### Install (64 bit)
 `wget https://raw.githubusercontent.com/ivan-hc/Firefox-for-Linux-scripts/main/firefox && chmod a+x ./firefox && sudo ./firefox`
