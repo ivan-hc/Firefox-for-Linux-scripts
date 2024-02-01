@@ -3,8 +3,16 @@
 mkdir /opt/firefox-beta
 cd /opt/firefox-beta
 
+if [[ $(grep "[[:space:]]ro[[:space:],]" /proc/mounts) ]]; then
+	mkdir -p /usr/local/share/applications
+	sed -i 's#/usr/share/applications#/usr/local/share/applications#g' ./$arg
+	SHARE_APPLICATIONS="local/share/applications"
+else
+	SHARE_APPLICATIONS="share/applications"
+fi
+
 echo "#!/bin/sh
-rm -R -f /opt/firefox-beta /usr/share/applications/firefox-beta.desktop /usr/local/bin/firefox-beta" >> /opt/firefox-beta/remove
+rm -R -f /opt/firefox-beta /usr/$SHARE_APPLICATIONS/firefox-beta.desktop /usr/local/bin/firefox-beta" >> /opt/firefox-beta/remove
 chmod a+x /opt/firefox-beta/remove
 
 mkdir tmp;
@@ -119,7 +127,7 @@ chown -R $currentuser /opt/firefox-beta
 
 ln -s /opt/firefox-beta/firefox /usr/local/bin/firefox-beta
 
-rm -R -f /usr/share/applications/firefox-beta.desktop
+rm -R -f /usr/$SHARE_APPLICATIONS/firefox-beta.desktop
 echo "[Desktop Entry]
 Name=Firefox Beta
 Comment=Web Browser
@@ -134,7 +142,7 @@ Actions=Private;
 
 [Desktop Action Private]
 Exec=/opt/firefox-beta/firefox --private-window %u
-Name=Open in private mode"  >> /usr/share/applications/firefox-beta.desktop
+Name=Open in private mode"  >> /usr/$SHARE_APPLICATIONS/firefox-beta.desktop
 
 echo "";
 echo " Firefox Beta has been installed! ";

@@ -3,8 +3,16 @@
 mkdir /opt/firefox
 cd /opt/firefox
 
+if [[ $(grep "[[:space:]]ro[[:space:],]" /proc/mounts) ]]; then
+	mkdir -p /usr/local/share/applications
+	sed -i 's#/usr/share/applications#/usr/local/share/applications#g' ./$arg
+	SHARE_APPLICATIONS="local/share/applications"
+else
+	SHARE_APPLICATIONS="share/applications"
+fi
+
 echo "#!/bin/sh
-rm -R -f  /opt/firefox /usr/share/applications/firefox-stable.desktop /usr/local/bin/firefox" >> /opt/firefox/remove
+rm -R -f  /opt/firefox /usr/$SHARE_APPLICATIONS/firefox-stable.desktop /usr/local/bin/firefox" >> /opt/firefox/remove
 chmod a+x /opt/firefox/remove
 
 mkdir tmp;
@@ -119,7 +127,7 @@ chown -R $currentuser /opt/firefox
 
 ln -s /opt/firefox/firefox /usr/local/bin/firefox
 
-rm -R -f  /usr/share/applications/firefox-stable.desktop
+rm -R -f  /usr/$SHARE_APPLICATIONS/firefox-stable.desktop
 echo "[Desktop Entry]
 [Desktop Entry]
 Version=1.0
@@ -281,7 +289,7 @@ Name[vi]=Cửa sổ riêng tư mới
 Name[wo]=Panlanteeru biir bu bees
 Name[xh]=Ifestile yangasese entsha
 Name[zh-CN]=新建隐私浏览窗口
-Name[zh-TW]=新增隱私視窗"  >> /usr/share/applications/firefox-stable.desktop
+Name[zh-TW]=新增隱私視窗"  >> /usr/$SHARE_APPLICATIONS/firefox-stable.desktop
 
 echo "";
 echo " Firefox Stable has been installed! ";

@@ -3,8 +3,16 @@
 mkdir /opt/firefox-nightly
 cd /opt/firefox-nightly
 
+if [[ $(grep "[[:space:]]ro[[:space:],]" /proc/mounts) ]]; then
+	mkdir -p /usr/local/share/applications
+	sed -i 's#/usr/share/applications#/usr/local/share/applications#g' ./$arg
+	SHARE_APPLICATIONS="local/share/applications"
+else
+	SHARE_APPLICATIONS="share/applications"
+fi
+
 echo "#!/bin/sh
-rm -R -f /opt/firefox-nightly /usr/share/applications/firefox-nightly.desktop /usr/local/bin/firefox-nightly" >> /opt/firefox-nightly/remove
+rm -R -f /opt/firefox-nightly /usr/$SHARE_APPLICATIONS/firefox-nightly.desktop /usr/local/bin/firefox-nightly" >> /opt/firefox-nightly/remove
 chmod a+x /opt/firefox-nightly/remove
 
 mkdir tmp;
@@ -119,7 +127,7 @@ chown -R $currentuser /opt/firefox-nightly
 
 ln -s /opt/firefox-nightly/firefox /usr/local/bin/firefox-nightly
 
-rm -R -f /usr/share/applications/firefox-nightly.desktop
+rm -R -f /usr/$SHARE_APPLICATIONS/firefox-nightly.desktop
 echo "[Desktop Entry]
 Name=Firefox Nightly
 Comment=Web Browser
@@ -134,7 +142,7 @@ Actions=Private;
 
 [Desktop Action Private]
 Exec=/opt/firefox-nightly/firefox --private-window %u
-Name=Open in private mode"  >> /usr/share/applications/firefox-nightly.desktop
+Name=Open in private mode"  >> /usr/$SHARE_APPLICATIONS/firefox-nightly.desktop
 
 echo "";
 echo " Firefox Nightly has been installed! ";
