@@ -8,6 +8,7 @@ Use the following links to navigate on this page:
 - [Firefox Beta](#firefox-beta)
 - [Firefox DevEdition](#firefox-devedition)
 - [Firefox Nightly](#firefox-nightly)
+- [Install them all with ease](#install-them-all-with-ease)
 
 Learn more about ["AM", the Application Manager for GNU/Linux](https://github.com/ivan-hc/AM-application-manager) that only installs/removes/updates/manages/allows standalone programs.
 
@@ -58,7 +59,7 @@ Learn more about ["AM", the Application Manager for GNU/Linux](https://github.co
 
 ------------------------------------------------------------------------
 
-## Install and update them all with ease
+## Install them all with ease
 
 ### *"*AM*" Application Manager* 
 #### *Package manager, database & solutions for all AppImages and portable apps for GNU/Linux!*
